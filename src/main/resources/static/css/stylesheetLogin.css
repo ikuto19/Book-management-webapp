@@ -1,0 +1,77 @@
+* {
+	margin: 0 auto;
+	padding: 0px 0px;
+}
+
+body {
+	text-align: center;
+	z-index: 0;
+	background-image: url("../images/books-1245690_1920.jpg");
+	background-size: cover;
+}
+
+.main_container {
+	margin: 10em auto;
+	padding: 2.5em 0;
+	width: 60%;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.message {
+	margin-bottom: 1.5em;
+	font-size: 20px;
+}
+
+.buttons {
+	display: flex; /*アイコン、テキストボックスを調整する*/
+	align-items: center; /*アイコン、テキストボックスを縦方向の中心に*/
+	justify-content: center; /*アイコン、テキストボックスを横方向の中心に*/
+	height: 50px;
+	width: 60%;
+	background-color: white;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	transition: all .2s ease-out;
+	outline: none;
+}
+
+.buttons:hover {
+	color: #00cac5;
+	height: 55px;
+	width: 70%;
+}
+
+.fa-users { /*アイコンに一定のスペースを設ける*/
+	height: 15px;
+	width: 15px;
+	padding: 10px 17px 10px 20px;
+}
+
+.fa-lock { /*アイコンに一定のスペースを設ける*/
+	height: 15px;
+	width: 15px;
+	padding: 10px 16px 10px 20px;
+}
+
+.submit {
+	height: 3em;
+	width: 7em;
+	color: white;
+	background-color: #00cac5;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+}
+
+.submit:hover {
+	background-color: #50a5b6;
+}
+
+.texts {
+	font-size: 20px;
+	width: 100%; /*flexの中で100%広げる*/
+	background-color: white;
+	border: none; /*枠線非表示*/
+	outline: none; /*フォーカス時の枠線非表示*/
+	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}

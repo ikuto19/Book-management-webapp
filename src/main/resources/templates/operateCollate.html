@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
+<link href="/css/stylesheetIndex.css"
+	th:href="@{/css/stylesheetIndex.css}" rel="stylesheet"></link>
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+<script type="text/javascript" src="/js/bookInfo.js"
+	th:src="@{/js/bookInfo.js}"></script>
+
+<meta charset="UTF-8">
+<title>書籍管理アプリ</title>
+</head>
+
+<body>
+	<div class="main_containerCollate background">
+		<form method="get" action="regist">
+			<div class="flexbox">
+				<div class="">
+					<div class="info">
+						ISBN：<input id="isbn" class="texts" type="text" name="isbn" th:value="${isbn}"
+							autofocus>
+					</div>
+
+					<div class="info">
+						書籍名：<input id="title" class="texts" type="text" name="title" value="">
+					</div>
+
+					<div class="info">
+						出版社：<input id="publisher" class="texts" type="text" name="publisher" value="">
+					</div>
+
+					<div class="info">
+						著者：<input id="author" class="texts" type="text" name="author" value="">
+					</div>
+				</div>
+				<div class="">
+					<p id="thumbnail_image"></p>
+					<input hidden id="thumbnail" type="text" name="thumbnail" value="">
+				</div>
+			</div>
+			<div class="info">
+				<p>上記の書籍について、下記を選択してください.</p>
+				<button type="submit" class="submit">登録</button>
+				<button type="submit" class="submit" formaction="delete">削除</button>
+			</div>
+		</form>
+
+		<div class="link">
+			<a href="/index">戻る</a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/stylesheetIndex.css" th:href="@{/css/stylesheetIndex.css}"
+	rel="stylesheet"></link>
+<title>登録ページ</title>
+</head>
+<body>
+	<div class="main_container do">
+		<div class=title>
+			<h1>書籍登録</h1>
+		</div>
+		<div class="message">
+			<p th:text="${message}"></p>
+		</div>
+		<div>
+			<a href="index">戻る</a>
+		</div>
+	</div>
+</body>
+</html>

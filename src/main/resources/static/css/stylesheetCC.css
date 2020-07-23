@@ -1,0 +1,52 @@
+* {
+	margin: 0 auto;
+	padding: 0px 0px;
+}
+
+body {
+	text-align: center;
+	z-index: 0;
+	background-image: url("../images/books-1245690_1920.jpg");
+	background-size: cover;
+}
+
+.main_container {
+	margin: 4em auto;
+	padding: 2.5em 0;
+	width: 75%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+.main_container h1 {
+	font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo,
+		'ＭＳ Ｐゴシック', sans-serif;
+	text-shadow: 2px 0 5px white;
+	border-bottom: solid 2px white;
+	width: 90%;
+}
+
+table {
+	margin-top: 20px;
+	background: rgba(255, 255, 255, 0.65);
+}
+
+.images {
+	margin-top: 20px;
+}
+
+img {
+	margin: 15px;
+}
+th{
+	padding: 5px 10px;
+}
+
+td{
+	padding: 10px 5px;
+}
+
+.link {
+	margin-top: 20px;
+}

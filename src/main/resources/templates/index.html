@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<link href="/css/stylesheetIndex.css" th:href="@{/css/stylesheetIndex.css}"
+	rel="stylesheet"></link>
+<head>
+<title>書籍管理アプリ</title>
+</head>
+
+<body>
+	<div class="main_container">
+		<div class=title>
+			<h1>書籍管理 Web Application</h1>
+		</div>
+		<div class="middle_container">
+			<div class="contains collate">
+				<form method="get" action="operateCollate">
+					<input type="text" class="texts" name="isbn" value="" placeholder="ISBN コード"> <input
+						class="submit" type="submit" value="書籍照合">
+				</form>
+			</div>
+			<div class="contains flexbox">
+				<form method="get" action="operateCheck">
+					<input class="submit" type="submit" value="書籍情報表示">
+				</form>
+				<form method="get" action="operateCover">
+					<input class="submit" type="submit" value="書籍表紙表示">
+				</form>
+				<form th:action="@{/logout}" method="post">
+					<input class="submit" type="submit" value="ログアウト" />
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

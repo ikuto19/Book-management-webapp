@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/stylesheetCC.css" th:href="@{/css/stylesheetCC.css}"
+	rel="stylesheet"></link>
+<title>画像表示ページ</title>
+</head>
+<body>
+	<div class="main_container">
+		<div class=title>
+			<h1>書籍画像表示</h1>
+		</div>
+		<div class="images">
+			<span th:each="isbn : ${isbnList}"> <img
+				th:src="${isbn.thumbnail}" style='border: solid 1px #000000' />
+			</span>
+		</div>
+		<div class="link">
+			<a href="index">戻る</a>
+		</div>
+	</div>
+</body>
+</html>

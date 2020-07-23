@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/stylesheetCC.css" th:href="@{/css/stylesheetCC.css}"
+	rel="stylesheet"></link>
+<title>情報表示ページ</title>
+</head>
+<body>
+	<div class="main_container">
+		<div class=title>
+			<h1>書籍情報表示</h1>
+		</div>
+		<table border="1" style="border-collapse: collapse">
+			<tr>
+				<th>ISBNコード</th>
+				<th>タイトル</th>
+				<th>出版社</th>
+				<th>著者</th>
+				<th>サムネイルURL</th>
+			</tr>
+			<tr th:each="isbn : ${isbnList}">
+				<td th:text="${isbn.isbn}"></td>
+				<td th:text="${isbn.title}"></td>
+				<td th:text="${isbn.publisher}"></td>
+				<td th:text="${isbn.author}"></td>
+				<td th:text="${isbn.thumbnail}"></td>
+			</tr>
+		</table>
+		<div class="link">
+			<a href="index">戻る</a>
+		</div>
+	</div>
+</body>
+</html>

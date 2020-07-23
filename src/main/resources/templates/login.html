@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<link href="/css/stylesheetLogin.css" th:href="@{/css/stylesheetLogin.css}" rel="stylesheet"></link>
+<link rel="stylesheet"
+	th:href="@{https://use.fontawesome.com/releases/v5.1.0/css/all.css}">
+<title>LoginPage</title>
+</head>
+<body>
+	<div class="main_container">
+		<p th:if="${param.error}" class="message">※ユーザー名かパスワードが違います</p>
+		<p th:if="${param.logout}" class="message">※ログアウト済みです</p>
+		<div class="login_container">
+			<form th:action="@{/login}" method="post">
+				<div class="buttons username">
+					<i class="fas fa-users"></i> <input class="texts" type="text" name="username"
+						placeholder="username" />
+				</div>
+				<div class="buttons pass">
+					<i class="fas fa-lock"></i> <input class="texts" type="password" name="password"
+						placeholder="password" />
+				</div>
+				<div class="submitButton">
+					<input class="submit" type="submit" value="ログイン" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
